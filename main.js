@@ -25,3 +25,12 @@ window.onclick = function (event) {
         popup.style.display = "none";
     }
 }
+
+
+// sounds Effects
+
+const noo = new Audio();
+noo.src = "sounds/noo.mp3"
+
+const yeah = new Audio();
+yeah.src = "sounds/ohyeah.mp3"
