@@ -1,0 +1,289 @@
+/* first letter font */
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;1,200;1,500;1,600&family=Reem+Kufi+Fun:wght@400;500;600&family=Satisfy&display=swap');
+
+/* ******************************* */
+/* Css rules for specify families */
+
+/* font-family: 'Kanit', sans-serif;
+font-family: 'Reem Kufi Fun', sans-serif;
+font-family: 'Satisfy', cursive; */
+
+/* ******************************* */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;1,200;1,500;1,600&family=Reem+Kufi+Fun:wght@400;500;600&display=swap');
+/* font family => Kanti*/
+
+/* font-family: 'Kanit', sans-serif;
+font-family: 'Reem Kufi Fun', sans-serif; */
+:root{
+    /* General Colors */
+    --pink:#ff0060;
+    --red:#9e0c13;
+    --gray:#cdcdd3;
+}
+body{
+    font-family: 'Kanit', sans-serif;
+    margin:0;
+    height: 100vh;
+    background:var(--gray);
+}
+
+.container{
+    display: grid;
+    text-align:center;
+    justify-items: center;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+header h2{
+    color:var(--red);
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size:2rem;
+}
+span,
+header h2:first-letter{
+   font-family: 'Satisfy', cursive;
+   font-size:2rem;
+}
+
+.container .bnts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.no {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+    var(--red);
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+  padding:2rem;
+}
+
+.no:hover,
+.no:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+
+.no {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .3em ;
+  transform: .3s;
+}
+
+
+.yes {
+  align-items: center;
+  background-color: var(--pink);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.yes:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.yes:hover:after {
+  transform: translate(0, 0);
+}
+
+.yes:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.yes:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .yes {
+    padding: 0 40px;
+  }
+}
+
+/* Pop up  */
+
+/* ************************************* */
+                /* heart pop up */
+/* ************************************* */
+
+
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-26%);
+    z-index: 9999;
+    background: #0b1522;
+    width:28rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    visibility:hidden;
+  
+  }
+  .pop-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+  }
+  .pop-content .icon{
+    text-align: center;
+    font-size: 2rem;
+    color: #b33771;
+    border: 0.9rem solid #c32c71;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin:0 auto; 
+    border-radius:50px;
+    margin-top: 2rem;
+  }
+  
+  .pop-content .content{
+    color: #25b125;
+    font-size:1.7rem;text-align: center;padding:1rem 0;
+    font-family: sans-serif;
+  }
+  
+  .pop-content small{
+    color: #999;
+    font-family: sans-serif;
+  }
+  
+  .show{
+    animation: show 1s forwards;
+  }
+  
+  
+  @keyframes show{
+    100%{
+    opacity: 1;
+    visibility:visible;
+  
+    }
+  }
+  
+  
+  @media (max-width:451px){
+    .popup{
+      width: 90%;
+    }
+  }
+  
+  .remove{
+    display: none;
+  }
+
+
+.popup .heart{
+    height:100px;
+    width:100px;
+    background-color:#900515;
+    position:relative;
+    box-shadow:10px 10px 90px #f20044;
+    animation:animate .6s linear infinite;
+    display: flex;
+    align-items:center;
+}
+
+.pop-content small{
+    bottom:0;
+    position:absolute;
+    color:white;
+    font-size:2rem; 
+    text-align:center;
+}
+
+@keyframes animate {
+    0%{
+        transform:rotate(-45deg) scale(1.07)
+    }
+    80%{
+        transform: rotate(-45deg) scale(1)
+    }
+    100%{
+        transform: rotate(-45deg) scale(.8);
+    }
+}
+
+.popup .heart::before{
+    content:"";
+    position:absolute;
+    background:#b00a1d;
+    height:100px;
+    width: 100px;
+    box-shadow:10px 10px 90px #f20044;
+    top:-50%;
+    border-radius:50%;
+}
+
+.popup .heart::after{
+    content:"";
+    position:absolute;
+    background:#bc1528;
+    height:100px;
+    width: 100px;
+    box-shadow:10px 10px 90px #f20044;
+    right:-50%;
+    border-radius:50%;    
+}
+
+
+@media (max-width:413px){
+    .gft_love img{
+        width:80%;
+    }
+
+    .popup{
+        
+        transform:translate(-50%,-78%);
+    }
+}
+
